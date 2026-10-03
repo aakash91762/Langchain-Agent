@@ -170,9 +170,8 @@ in your terminal.
 ## 4. Install Dependencies
 
 
-```bash
-pip install python-dotenv langchain-google-genai langchain-community tavily-python langchain requests streamlit
-```
+pip install -r requirements.txt
+streamlit run main.py
 
 ---
 
