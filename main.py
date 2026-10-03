@@ -10,14 +10,20 @@ from langchain_core.prompts import PromptTemplate
 
 
 load_dotenv()
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+# GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 WEATHERSTACK_API_KEY = os.getenv("WEATHERSTACK_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 search_tool = TavilySearchResults(max_results=2)
-llm = ChatGoogleGenerativeAI(
-    model="gemini-3-flash-preview",
+# llm = ChatGoogleGenerativeAI(
+#     model="gemini-3-flash-preview",
+#     temperature=0.3,
+# )
+llm = ChatGroq(
+    model="qwen/qwen3.8-27b",
     temperature=0.3,
+    groq_api_key=GROQ_API_KEY
 )
 # result = search_tool.invoke("Give me the latest news on AI")
 # result
