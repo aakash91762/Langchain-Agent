@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq # type: ignore
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain import hub
