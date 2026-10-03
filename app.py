@@ -29,7 +29,7 @@ st.set_page_config(
 
 load_dotenv()
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+# GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 WEATHERSTACK_API_KEY = os.getenv("WEATHERSTACK_API_KEY")
 
@@ -38,9 +38,9 @@ WEATHERSTACK_API_KEY = os.getenv("WEATHERSTACK_API_KEY")
 # CHECK API KEYS
 # =========================================================
 
-if not GOOGLE_API_KEY:
-    st.error("GOOGLE_API_KEY is missing from .env")
-    st.stop()
+# if not GOOGLE_API_KEY:
+#     st.error("GOOGLE_API_KEY is missing from .env")
+#     st.stop()
 
 if not TAVILY_API_KEY:
     st.error("TAVILY_API_KEY is missing from .env")
