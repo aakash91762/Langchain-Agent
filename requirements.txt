@@ -1,5 +1,6 @@
 streamlit
-langchain
+langchain==0.3.30
+langchain-core==0.3.86
 langchain-google-genai
 langchain-community
 tavily-python
