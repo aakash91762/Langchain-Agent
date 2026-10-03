@@ -249,7 +249,8 @@ tools = [
 # =========================================================
 
 prompt = hub.pull(
-    "hwchase17/react"
+    "hwchase17/react",
+    dangerously_pull_public_prompt=True
 )
 
 
