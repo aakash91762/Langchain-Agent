@@ -419,7 +419,7 @@ print(response["output"])
 To start the Streamlit interface:
 
 ```bash
-streamlit run main.py
+python3 -m streamlit run app.py
 ```
 
 Streamlit will start a local web server.
