@@ -2,15 +2,16 @@ import os
 import requests
 import streamlit as st
 from dotenv import load_dotenv
-
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain import hub
 from langchain.tools import tool
 from langchain_core.prompts import PromptTemplate
 
+load_dotenv()
 
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 # =========================================================
 # PAGE CONFIG
 # =========================================================
@@ -158,10 +159,15 @@ search_tool = TavilySearchResults(
 # GEMINI MODEL
 # =========================================================
 
-llm = ChatGoogleGenerativeAI(
-    model="gemini-3-flash-preview",
+# llm = ChatGoogleGenerativeAI(
+#     model="gemini-3-flash-preview",
+#     temperature=0.3,
+#     google_api_key=GOOGLE_API_KEY
+# )
+llm = ChatGroq(
+    model="qwen/qwen3.8-27b",
     temperature=0.3,
-    google_api_key=GOOGLE_API_KEY
+    groq_api_key=GROQ_API_KEY
 )
 
 
