@@ -6,6 +6,8 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain import hub
 from langchain.tools import tool
 import requests
+from langchain_core.prompts import PromptTemplate
+
 
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
