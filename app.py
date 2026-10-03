@@ -2,7 +2,7 @@ import os
 import requests
 import streamlit as st
 from dotenv import load_dotenv
-from langchain_groq import ChatGroq
+from langchain_groq import ChatGroq # type: ignore
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain import hub

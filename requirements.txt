@@ -6,3 +6,4 @@ langchain-community
 tavily-python
 python-dotenv
 requests
+langchain-groq
