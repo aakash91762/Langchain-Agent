@@ -1,7 +1,6 @@
 import os
 import requests
-import main as st
-
+import streamlit as st
 from dotenv import load_dotenv
 
 from langchain_google_genai import ChatGoogleGenerativeAI
