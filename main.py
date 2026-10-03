@@ -21,7 +21,10 @@ llm = ChatGoogleGenerativeAI(
 # result
 # res=llm.invoke("what is date today")
 # print("res",res.content)
-prompt = hub.pull("hwchase17/react")
+prompt = hub.pull(
+    "hwchase17/react",
+    dangerously_pull_public_prompt=True
+)
 
 @tool
 def get_weather_data(city: str) -> str:
